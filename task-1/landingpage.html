@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ice Cream Shop</title>
+  <link rel="stylesheet" href="landingpage.css">
+  <script src="landingpage.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-content">
+        <div class="logo-container">
+            <img id="logo" src="images/logo.png" alt="iCream Logo">
+            <span class="title">Ice Cream</span>
+        </div>
+        <h1>Frozen Oasis</h1>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="search-bar">
+          <input type="text" placeholder="Search...">
+          <button type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+          </button>
+        </div>
+    </nav>
+</header>
+
+  <section id="home">
+      <div class="slide">
+        <h2>Welcome to Frozen Oasis!</h2>
+        <p class="h1">You think you're old?</br> Ice cream is older!</p>
+        <button class="history-btn" onclick="scrollToAbout()"><span>know our history now</span></button>
+      </div>
+      <div class="slide">
+        <h2>Our Flavors</h2>
+            <p>Indulge in a variety of flavors at Scoopify:</p>
+            <ul>
+                <li>Classic Vanilla</li>
+                <li>Decadent Chocolate</li>
+                <li>Refreshing Strawberry</li>
+                <li>Creamy Butter Pecan<br>more..</li>
+            </ul>
+            <p>>visit us today and get your favorite icecream!</p>
+            <button class="buy-now-btn" onclick="scrollToMenu()"><span>Get the Scoop🍦</span></button>
+      </div>
+      <div class="slide">
+        <h2>Our Commitment</h2>
+        <p>At Scoopify, we're committed to:</p>
+        <ul>
+            <li>Using only the finest ingredients</li>
+            <li>Providing exceptional customer service</li>
+            <li>Creating a welcoming atmosphere</li>
+            <li>Supporting local farmers and producers</li>
+            <li>Bringing joy to our community</li>
+        </ul>
+        <p>>Join us in our mission to spread happiness, one scoop at a time!</p>
+      </div>
+      <div class="controls">
+        <a href="#" class="prev" onclick="plusSlides(-1)">&#8249; Prev</a>
+        <a href="#" class="next" onclick="plusSlides(1)">Next &#8250;</a>
+      </div>
+  </section>
+  
+  <section id="menu">
+    <h2>Menu</h2>
+    <p class="highlight">Double click to see menu</p>
+    <div class="boxes">
+      <div class="menu-item" onclick="toggleKulfiMenu()">
+        <h3>Kulfi Menu</h3>
+        <div class="menu1">
+          <p>A traditional Indian frozen dessert made with condensed milk, nuts, and spices.</p>
+        </div>
+      </div>
+      <div class="menu-item" onclick="toggleGelatoMenu()">
+        <h3>Gelato Ice Creams</h3>
+        <div class="menu2">
+          <p>An Italian-style ice cream known for its dense and creamy texture.</p>
+        </div>
+      </div>
+      <div class="menu-item" onclick="toggleFrozenYogurtMenu()">
+        <h3>Frozen Yogurt</h3>
+        <div class="menu3">
+          <p>A healthier alternative made with yogurt instead of cream, available in various flavors.</p>
+        </div>
+      </div>
+      <div class="menu-item" onclick="toggleSherbetMenu()">
+        <h3>Sherbet</h3>
+        <div class="menu4">
+          <p>A fruity and refreshing frozen dessert made with fruit juice, sugar, and water.</p>
+        </div>
+      </div>
+      <div class="menu-item" onclick="togglePopsicleMenu()">
+        <h3>Ice Popsicle</h3>
+        <div class="menu5">
+          <p>A fun and refreshing treat available in a variety of fruity flavors.</p>
+        </div>
+      </div>
+      <div class="menu-item" onclick="toggleSorbetMenu()">
+        <h3>Sorbet</h3>
+        <div class="menu6">
+          <p>A dairy-free frozen dessert made with fruit puree, sugar, and water.</p>
+        </div>
+      </div>
+      <div class="menu-item" onclick="toggleSoftServeMenu()">
+        <h3>Soft Serve</h3>
+        <div class="menu7">
+          <p>A creamy and smooth ice cream served directly from a machine.</p>
+        </div>
+      </div>
+      <div class="menu-item" onclick="togglePhiladelphiaMenu()">
+        <h3>Philadelphia Ice Cream</h3>
+        <div class="menu8">
+          <p>A style of ice cream made without eggs, resulting in a lighter and creamier texture.</p>
+        </div>
+      </div>
+      <div class="menu-item" onclick="toggleSnowCreamMenu()">
+        <h3>Snow Cream</h3>
+        <div class="menu9">
+          <p>A fluffy and creamy frozen dessert made with fresh snow and condensed milk.</p>
+        </div>
+      </div>
+      <div class="menu-item" onclick="toggleItalianIceMenu()">
+        <h3>Italian Ice</h3>
+        <div class="menu10">
+          <p>A refreshing and fruity frozen dessert similar to sorbet but with a smoother texture.</p>
+        </div>
+      </div>
+      <div class="menu-item" onclick="toggleDondurmaMenu()">
+        <h3>Dondurma</h3>
+        <div class="menu11">
+          <p>A traditional Turkish ice cream known for its elasticity and chewy texture.</p>
+        </div>
+      </div>
+      <div class="menu-item" onclick="toggleRolledMenu()">
+        <h3>Rolled Ice Cream</h3>
+        <div class="menu12">
+          <p>A trendy ice cream made by pouring liquid ice cream mixture onto a cold surface and rolling it into thin layers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="kulfi-menu">
+    <div class="kulfi-menu-content">
+      <img src="images/close.jpg" class="close-btn" onclick="closeKulfiMenu()" alt="Close">
+      <h2>Kulfi Menu</h2>
+      <div class="boxes">
+        <div class="menu-item">
+          <h3>Traditional Malai Kulfi</h3>
+          <p>A classic Indian ice cream made with reduced milk, sugar, and flavored with cardamom.</p>
+          <p>$3.50 per serving</p>
+        </div>
+        <div class="menu-item">
+          <h3>Pista Kulfi</h3>
+          <p>A rich and creamy kulfi flavored with pistachios.</p>
+          <p>$4.00 per serving</p>
+        </div>
+        <div class="menu-item">
+          <h3>Mango Kulfi</h3>
+          <p>A refreshing kulfi made with ripe mangoes and milk.</p>
+          <p>$4.00 per serving</p>
+        </div>
+        <div class="menu-item">
+          <h3>Kesar Badam Kulfi</h3>
+          <p>A luxurious kulfi flavored with saffron and almonds.</p>
+          <p>$4.50 per serving</p>
+        </div>
+        <div class="menu-item">
+          <h3>Rose Kulfi</h3>
+          <p>A fragrant and floral kulfi infused with rose water.</p>
+          <p>$4.00 per serving</p>
+        </div>
+        <div class="menu-item">
+          <h3>Chocolate Kulfi</h3>
+          <p>A decadent kulfi made with rich cocoa and milk.</p>
+          <p>$4.50 per serving</p>
+        </div>
+        <div class="menu-item">
+          <h3>Fruit Kulfi</h3>
+          <p>A fruity kulfi with a mix of seasonal fruits and milk.</p>
+          <p>$4.00 per serving</p>
+        </div>
+        <div class="menu-item">
+          <h3>Kulfi Falooda</h3>
+          <p>A delightful combination of kulfi, vermicelli, rose syrup, and basil seeds.</p>
+          <p>$5.00 per serving</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="gelato-menu">
+    <div class="gelato-menu-content">
+      <img src="images/close.jpg" class="close-btn" onclick="closeGelatoMenu()" alt="Close">
+      <h2>Gelato Menu</h2>
+      <div class="boxes">
+        <div class="menu-item">
+          <h3>Classic Vanilla</h3>
+          <p>The timeless classic with a rich and creamy texture.</p>
+          <p>$3.50 per scoop</p>
+        </div>
+        <div class="menu-item">
+          <h3>Decadent Chocolate</h3>
+          <p>Indulge in the deep, luxurious flavor of chocolate.</p>
+          <p>$3.50 per scoop</p>
+        </div>
+        <div class="menu-item">
+          <h3>Refreshing Strawberry</h3>
+          <p>Enjoy the sweetness and tartness of fresh strawberries.</p>
+          <p>$3.50 per scoop</p>
+        </div>
+        <div class="menu-item">
+          <h3>Creamy Hazelnut</h3>
+          <p>A nutty and rich flavor that's a perfect balance of sweet and savory.</p>
+          <p>$3.50 per scoop</p>
+        </div>
+        <div class="menu-item">
+          <h3>Zesty Lemon</h3>
+          <p>Experience the tangy and refreshing taste of lemon in every bite.</p>
+          <p>$3.50 per scoop</p>
+        </div>
+        <div class="menu-item">
+          <h3>Stracciatella</h3>
+          <p>A delicious blend of creamy vanilla gelato and chocolate shavings.</p>
+          <p>$3.50 per scoop</p>
+        </div>
+        <div class="menu-item">
+          <h3>Mint Chocolate Chip</h3>
+          <p>Cool mint gelato with rich chocolate chips mixed in.</p>
+          <p>$3.50 per scoop</p>
+        </div>
+        <div class="menu-item">
+          <h3>Cookies and Cream</h3>
+          <p>Velvety gelato loaded with chunks of chocolate cookies.</p>
+          <p>$3.50 per scoop</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="frozen-yogurt-menu">
+    <div class="frozen-yogurt-menu-content">
+        <img src="images/close.jpg" class="close-btn" onclick="closeFrozenYogurtMenu()" alt="Close">
+        <h2>Frozen Yogurt Menu</h2>
+        <div class="boxes">
+            <div class="menu-item">
+                <h3>Classic Vanilla Frozen Yogurt</h3>
+                <p>Smooth and creamy frozen yogurt with a classic vanilla flavor.</p>
+                <p>$3.50 per serving</p>
+            </div>
+            <div class="menu-item">
+                <h3>Chocolate Frozen Yogurt</h3>
+                <p>Rich and indulgent frozen yogurt infused with chocolate flavor.</p>
+                <p>$3.50 per serving</p>
+            </div>
+            <div class="menu-item">
+                <h3>Strawberry Frozen Yogurt</h3>
+                <p>Frozen yogurt with the refreshing taste of ripe strawberries.</p>
+                <p>$3.50 per serving</p>
+            </div>
+            <div class="menu-item">
+                <h3>Peach Frozen Yogurt</h3>
+                <p>Delicious frozen yogurt flavored with sweet peaches.</p>
+                <p>$3.50 per serving</p>
+            </div>
+            <div class="menu-item">
+                <h3>Mango Frozen Yogurt</h3>
+                <p>Tropical frozen yogurt made with ripe mangoes.</p>
+                <p>$3.50 per serving</p>
+            </div>
+            <div class="menu-item">
+                <h3>Raspberry Frozen Yogurt</h3>
+                <p>Frozen yogurt bursting with the tangy flavor of raspberries.</p>
+                <p>$3.50 per serving</p>
+            </div>
+            <div class="menu-item">
+                <h3>Blueberry Frozen Yogurt</h3>
+                <p>Refreshing frozen yogurt infused with juicy blueberries.</p>
+                <p>$3.50 per serving</p>
+            </div>
+            <div class="menu-item">
+                <h3>Key Lime Frozen Yogurt</h3>
+                <p>Creamy frozen yogurt with the zesty taste of key lime.</p>
+                <p>$3.50 per serving</p>
+            </div>
+            <div class="menu-item">
+                <h3>Lemon Frozen Yogurt</h3>
+                <p>Tangy and refreshing frozen yogurt flavored with lemon.</p>
+                <p>$3.50 per serving</p>
+            </div>
+            <div class="menu-item">
+                <h3>Cookies and Cream Frozen Yogurt</h3>
+                <p>Indulgent frozen yogurt loaded with chunks of chocolate cookies.</p>
+                <p>$3.50 per serving</p>
+            </div>
+            <div class="menu-item">
+                <h3>Peanut Butter Frozen Yogurt</h3>
+                <p>Rich and creamy frozen yogurt swirled with peanut butter.</p>
+                <p>$3.50 per serving</p>
+            </div>
+            <div class="menu-item">
+                <h3>Caramel Frozen Yogurt</h3>
+                <p>Decadent frozen yogurt drizzled with sweet caramel sauce.</p>
+                <p>$3.50 per serving</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="sherbet-menu">
+  <div class="sherbet-menu-content">
+    <img src="images/close.jpg" class="close-btn" onclick="closeSherbetMenu()" alt="Close">
+    <h2>Sherbet Menu</h2>
+    <div class="boxes">
+      <div class="menu-item">
+        <h3>Orange Sherbet</h3>
+        <p>A tangy and refreshing sherbet bursting with the citrusy flavor of oranges.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Raspberry Sherbet</h3>
+        <p>Sweet and tangy sherbet made with ripe raspberries.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Lemon Sherbet</h3>
+        <p>Zesty and refreshing sherbet with a burst of lemon flavor.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Strawberry Sherbet</h3>
+        <p>Smooth and creamy sherbet infused with the essence of ripe strawberries.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Pineapple Sherbet</h3>
+        <p>Tropical sherbet with the sweet and tangy taste of pineapple.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Mango Sherbet</h3>
+        <p>Exotic sherbet made with luscious mangoes for a burst of tropical flavor.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Watermelon Sherbet</h3>
+        <p>Refreshing sherbet with the juicy goodness of watermelon.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Blueberry Sherbet</h3>
+        <p>Delicious sherbet loaded with antioxidant-rich blueberries.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Peach Sherbet</h3>
+        <p>Sweet and velvety sherbet made with ripe peaches.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Blackberry Sherbet</h3>
+        <p>Rich and flavorful sherbet featuring the bold taste of blackberries.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Citrus Sherbet</h3>
+        <p>Refreshing sherbet blend with the zesty flavors of citrus fruits.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Passion Fruit Sherbet</h3>
+        <p>Exotic sherbet infused with the tropical flavor of passion fruit.</p>
+        <p>$3.00 per serving</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="ice-popsicle-menu">
+  <div class="ice-popsicle-menu-content">
+      <img src="images/close.jpg" class="close-btn" onclick="closePopsicleMenu()" alt="Close">
+      <h2>Ice Popsicle Menu</h2>
+      <div class="boxes">
+          <div class="menu-item">
+              <h3>Kala Khatta Popsicle</h3>
+              <p>A tangy and sweet popsicle with the flavor of Indian blackberry.</p>
+              <p>$2.50 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Rose Popsicle</h3>
+              <p>A floral and refreshing popsicle infused with the essence of rose.</p>
+              <p>$2.50 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Jaljeera Popsicle</h3>
+              <p>A spicy and tangy popsicle with the flavors of cumin and mint.</p>
+              <p>$2.50 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Imli Popsicle</h3>
+              <p>A sour and tangy popsicle made with tamarind pulp.</p>
+              <p>$2.50 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Chilli Guava Popsicle</h3>
+              <p>A unique popsicle with the fusion of spicy chili and sweet guava.</p>
+              <p>$2.50 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Aam Panna Popsicle</h3>
+              <p>A refreshing popsicle with the flavors of raw mango and spices.</p>
+              <p>$2.50 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Kokum Popsicle</h3>
+              <p>A tangy and sweet popsicle made from the fruit of the kokum tree.</p>
+              <p>$2.50 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Lychee Popsicle</h3>
+              <p>A refreshing popsicle featuring the sweet and floral taste of lychee.</p>
+              <p>$2.50 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Mango Chili Popsicle</h3>
+              <p>A spicy and sweet popsicle made with ripe mangoes and chili.</p>
+              <p>$2.50 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Pineapple Mint Popsicle</h3>
+              <p>A refreshing popsicle with the tropical flavor of pineapple and mint.</p>
+              <p>$2.50 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Watermelon Basil Popsicle</h3>
+              <p>A unique popsicle featuring the refreshing taste of watermelon and basil.</p>
+              <p>$2.50 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Coconut Lime Popsicle</h3>
+              <p>A tropical popsicle with the creamy flavor of coconut and the tanginess of lime.</p>
+              <p>$2.50 per serving</p>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="sorbet-menu">
+  <div class="sorbet-menu-content">
+      <img src="images/close.jpg" class="close-btn" onclick="closeSorbetMenu()" alt="Close">
+      <h2>Sorbet Menu</h2>
+      <div class="boxes">
+          <div class="menu-item">
+              <h3>Lemon Sorbet</h3>
+              <p>Tangy and refreshing sorbet made with fresh lemon juice.</p>
+              <p>$3.00 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Raspberry Sorbet</h3>
+              <p>Sweet and tart sorbet made with ripe raspberries.</p>
+              <p>$3.00 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Strawberry Sorbet</h3>
+              <p>Refreshing sorbet bursting with the flavor of ripe strawberries.</p>
+              <p>$3.00 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Mango Sorbet</h3>
+              <p>Tropical sorbet made with juicy mangoes.</p>
+              <p>$3.00 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Passion Fruit Sorbet</h3>
+              <p>Exotic sorbet with the tangy-sweet flavor of passion fruit.</p>
+              <p>$3.00 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Watermelon Sorbet</h3>
+              <p>Refreshing sorbet with the juicy goodness of watermelon.</p>
+              <p>$3.00 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Pineapple Sorbet</h3>
+              <p>Tropical sorbet made with fresh pineapple.</p>
+              <p>$3.00 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Coconut Sorbet</h3>
+              <p>Creamy and tropical sorbet made with coconut milk.</p>
+              <p>$3.00 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Blueberry Sorbet</h3>
+              <p>Refreshing sorbet featuring the sweet flavor of blueberries.</p>
+              <p>$3.00 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Mixed Berry Sorbet</h3>
+              <p>Sorbet made with a blend of strawberries, blueberries, and raspberries.</p>
+              <p>$3.00 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Peach Sorbet</h3>
+              <p>Refreshing sorbet made with ripe, juicy peaches.</p>
+              <p>$3.00 per serving</p>
+          </div>
+          <div class="menu-item">
+              <h3>Grape Sorbet</h3>
+              <p>Light and fruity sorbet made with fresh grapes.</p>
+              <p>$3.00 per serving</p>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="soft-serve-menu">
+  <div class="soft-serve-menu-content">
+    <img src="images/close.jpg" class="close-btn" onclick="closeSoftServeMenu()" alt="Close">
+    <h2>Soft Serve Menu</h2>
+    <div class="boxes">
+      <div class="menu-item">
+        <h3>Classic Vanilla Soft Serve</h3>
+        <p>Smooth and creamy soft serve with the timeless flavor of vanilla.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Chocolate Soft Serve</h3>
+        <p>Rich and indulgent soft serve infused with chocolate flavor.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Strawberry Soft Serve</h3>
+        <p>Refreshing soft serve with the sweet and tart taste of strawberries.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Mint Soft Serve</h3>
+        <p>Cool and refreshing soft serve with a hint of mint flavor.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Blueberry Soft Serve</h3>
+        <p>Smooth and creamy soft serve bursting with the flavor of fresh blueberries.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Butterscotch Soft Serve</h3>
+        <p>Rich and buttery soft serve with the indulgent flavor of butterscotch.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Coffee Soft Serve</h3>
+        <p>Smooth and creamy soft serve with the bold flavor of coffee.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Raspberry Ripple Soft Serve</h3>
+        <p>Creamy soft serve with swirls of tangy raspberry sauce.</p>
+        <p>$3.00 per serving</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="philadelphia-menu">
+  <div class="philadelphia-menu-content">
+    <img src="images/close.jpg" class="close-btn" onclick="closePhiladelphiaMenu()" alt="Close">
+    <h2>Philadelphia Ice Cream Menu</h2>
+    <div class="boxes">
+      <div class="menu-item">
+        <h3>Classic Vanilla</h3>
+        <p>The timeless classic with a rich and creamy texture.</p>
+        <p>$3.50 per scoop</p>
+      </div>
+      <div class="menu-item">
+        <h3>Decadent Chocolate</h3>
+        <p>Indulge in the deep, luxurious flavor of chocolate.</p>
+        <p>$3.50 per scoop</p>
+      </div>
+      <div class="menu-item">
+        <h3>Refreshing Strawberry</h3>
+        <p>Enjoy the sweetness and tartness of fresh strawberries.</p>
+        <p>$3.50 per scoop</p>
+      </div>
+      <div class="menu-item">
+        <h3>Creamy Butter Pecan</h3>
+        <p>A nutty and creamy flavor with crunchy pecan pieces.</p>
+        <p>$3.50 per scoop</p>
+      </div>
+      <div class="menu-item">
+        <h3>Mint Chocolate Chip</h3>
+        <p>Cool mint ice cream with rich chocolate chips throughout.</p>
+        <p>$3.50 per scoop</p>
+      </div>
+      <div class="menu-item">
+        <h3>Cookies and Cream</h3>
+        <p>Classic vanilla ice cream with chunks of chocolate cookies.</p>
+        <p>$3.50 per scoop</p>
+      </div>
+      <div class="menu-item">
+        <h3>Rocky Road</h3>
+        <p>Chocolate ice cream with marshmallows and almonds.</p>
+        <p>$3.50 per scoop</p>
+      </div>
+      <div class="menu-item">
+        <h3>Chocolate Chip Cookie Dough</h3>
+        <p>Vanilla ice cream with chunks of chocolate chip cookie dough.</p>
+        <p>$3.50 per scoop</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="snowcream-menu">
+  <div class="snowcream-menu-content">
+    <img src="images/close.jpg" class="close-btn" onclick="closeSnowCreamMenu()" alt="Close">
+    <h2>Snow Cream Menu</h2>
+    <div class="boxes">
+      <div class="menu-item">
+        <h3>Classic Snow Cream</h3>
+        <p>A traditional snow cream flavored with vanilla and sweetened condensed milk.</p>
+        <p>$4.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Chocolate Snow Cream</h3>
+        <p>Rich chocolate-flavored snow cream topped with chocolate syrup.</p>
+        <p>$4.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Strawberry Snow Cream</h3>
+        <p>Delicious strawberry-flavored snow cream with fresh strawberry toppings.</p>
+        <p>$4.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Mango Snow Cream</h3>
+        <p>Tropical mango-flavored snow cream topped with fresh mango chunks.</p>
+        <p>$4.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Matcha Snow Cream</h3>
+        <p>Green tea-flavored snow cream topped with sweetened red beans.</p>
+        <p>$5.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Taro Snow Cream</h3>
+        <p>Creamy taro-flavored snow cream topped with coconut flakes.</p>
+        <p>$5.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Black Sesame Snow Cream</h3>
+        <p>Rich and nutty black sesame-flavored snow cream topped with sesame seeds.</p>
+        <p>$5.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Ube Snow Cream</h3>
+        <p>Purple yam-flavored snow cream topped with ube jam and coconut shavings.</p>
+        <p>$5.50 per serving</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="italian-ice-menu">
+  <div class="italian-ice-menu-content">
+    <img src="images/close.jpg" class="close-btn" onclick="closeItalianIceMenu()" alt="Close">
+    <h2>Italian Ice Menu</h2>
+    <div class="boxes">
+      <div class="menu-item">
+        <h3>Lemon Italian Ice</h3>
+        <p>Refreshing Italian ice bursting with the tangy flavor of fresh lemons.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Strawberry Italian Ice</h3>
+        <p>Sweet and fruity Italian ice made with ripe strawberries.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Blue Raspberry Italian Ice</h3>
+        <p>Blue raspberry-flavored Italian ice with a vibrant color and sweet taste.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Watermelon Italian Ice</h3>
+        <p>Refreshing watermelon-flavored Italian ice perfect for hot summer days.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Mango Italian Ice</h3>
+        <p>Tropical mango-flavored Italian ice that's sweet and refreshing.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Pineapple Italian Ice</h3>
+        <p>Tangy pineapple-flavored Italian ice with chunks of real pineapple.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Cherry Italian Ice</h3>
+        <p>Classic cherry-flavored Italian ice with a burst of fruity sweetness.</p>
+        <p>$3.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Green Apple Italian Ice</h3>
+        <p>Tart and crisp green apple-flavored Italian ice that's sure to refresh.</p>
+        <p>$3.00 per serving</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="dondurma-menu">
+  <div class="dondurma-menu-content">
+    <img src="images/close.jpg" class="close-btn" onclick="closeDondurmaMenu()" alt="Close">
+    <h2>Dondurma Menu</h2>
+    <div class="boxes">
+      <div class="menu-item">
+        <h3>Traditional Dondurma</h3>
+        <p>A classic Turkish ice cream known for its stretchy and chewy texture.</p>
+        <p>$4.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Pistachio Dondurma</h3>
+        <p>Dondurma infused with rich pistachio flavor and crunchy pistachio pieces.</p>
+        <p>$4.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Chocolate Dondurma</h3>
+        <p>Dondurma with a decadent chocolate flavor and chocolate swirls.</p>
+        <p>$4.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Vanilla Dondurma</h3>
+        <p>Smooth and creamy dondurma with the classic taste of vanilla.</p>
+        <p>$4.00 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Strawberry Dondurma</h3>
+        <p>Dondurma infused with the sweet and tart flavor of ripe strawberries.</p>
+        <p>$4.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Mango Dondurma</h3>
+        <p>Tropical dondurma made with fresh mangoes for a burst of fruity goodness.</p>
+        <p>$4.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Coffee Dondurma</h3>
+        <p>Dondurma with a rich coffee flavor for the perfect pick-me-up treat.</p>
+        <p>$4.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Caramel Dondurma</h3>
+        <p>Decadent dondurma with swirls of caramel for a sweet indulgence.</p>
+        <p>$4.50 per serving</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="rolled-ice-cream-menu">
+  <div class="rolled-ice-cream-menu-content">
+    <img src="images/close.jpg" class="close-btn" onclick="closeRolledMenu()" alt="Close">
+    <h2>Rolled Ice Cream Menu</h2>
+    <div class="boxes">
+      <div class="menu-item">
+        <h3>Classic Vanilla Roll</h3>
+        <p>A timeless favorite with the rich and creamy taste of vanilla.</p>
+        <p>$4.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Decadent Chocolate Roll</h3>
+        <p>Indulge in the deep, luxurious flavor of chocolate in every bite.</p>
+        <p>$4.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Strawberry Delight Roll</h3>
+        <p>Enjoy the sweetness and tartness of fresh strawberries rolled into ice cream.</p>
+        <p>$4.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Mint Chocolate Chip Roll</h3>
+        <p>Cool mint ice cream with rich chocolate chips rolled up for a refreshing treat.</p>
+        <p>$4.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Cookies and Cream Dream Roll</h3>
+        <p>Velvety ice cream loaded with chunks of chocolate cookies for a delightful crunch.</p>
+        <p>$4.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Rocky Road Roll</h3>
+        <p>A decadent combination of chocolate ice cream, marshmallows, and nuts.</p>
+        <p>$4.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Salted Caramel Crunch Roll</h3>
+        <p>Smooth caramel ice cream with a sprinkle of sea salt and crunchy caramel pieces.</p>
+        <p>$4.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Peanut Butter Paradise Roll</h3>
+        <p>Creamy peanut butter ice cream rolled up for a nutty and satisfying treat.</p>
+        <p>$4.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Coconut Bliss Roll</h3>
+        <p>Escape to the tropics with this creamy coconut-flavored ice cream.</p>
+        <p>$4.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Blueberry Bonanza Roll</h3>
+        <p>Indulge in the sweet burst of blueberries swirled into delicious ice cream.</p>
+        <p>$4.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Coffee Caramel Crunch Roll</h3>
+        <p>Experience the perfect blend of rich coffee and sweet caramel with crunchy bits.</p>
+        <p>$4.50 per serving</p>
+      </div>
+      <div class="menu-item">
+        <h3>Matcha Madness Roll</h3>
+        <p>Delight in the earthy and vibrant flavors of matcha green tea in every roll.</p>
+        <p>$4.50 per serving</p>
+      </div>      
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+  <section id="about">
+    <div class="about-content">
+      <h2>About Us</h2>  
+      <p>Welcome to Frozen Oasis, where tradition meets taste!</p>
+      <p>Established in the 1870s by the Smith family, Frozen Oasis has been a beloved fixture in Frozen Town for over a century. What began as a humble ice cream parlor has blossomed into a cherished local institution, serving up smiles and scoops to generations of ice cream enthusiasts.</p>
+      <p>Over the years, Frozen Oasis has weathered its fair share of challenges and triumphs. From expanding our menu to include new flavors and treats, to renovating our shop to provide a cozy and welcoming atmosphere, each chapter in our history has been marked by a commitment to quality and a passion for bringing joy to our community.</p>
+      <p>As we look back on our journey, we're filled with gratitude for the support of our loyal customers, whose enthusiasm and patronage have fueled our growth and inspired us to continually strive for excellence. We take pride in sourcing the finest ingredients, crafting each scoop with care, and creating memorable experiences for every customer who walks through our doors.</p>
+      <p>>Today, as we continue to serve up scoops of happiness, we invite you to join us in celebrating our rich history and the timeless tradition of good old-fashioned ice cream!</p>
+      <div class="image-container">
+        <img  class="exterior-img"  src="images/exterior-img.jpg" alt="Frozen Oasis Exterior">
+        <img  class="interior-img"  src="images/interior-img.jpg" alt="Frozen Oasis Interior">
+      </div>
+    </div>
+  </section>
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="slider">
+      <div class="slides">
+        <img class="img1" src="images/customer1.jpg" alt="Customer 1">
+        <p>"The ice cream at Frozen Oasis is absolutely delicious! My family and I love coming here for a treat after dinner."</p>
+        <p class="author">- Jenny dhoe</p>
+      </div>
+      <div class="slides">
+        <img class="img2" src="images/customer2.jpg" alt="Customer 2">
+        <p>"I've been a regular at Frozen Oasis for years. The variety of flavors and the quality of ice cream never disappoint."</p>
+        <p class="author">- annie Smith</p>
+      </div>
+      <div class="slides">
+        <img class="img3" src="images/customer3.jpg" alt="Customer 3">
+        <p>"Frozen Oasis is my go-to place for a sweet treat. Their gelato flavors are unmatched!"</p>
+        <p class="author">- Emily Johnson</p>
+      </div>
+      <div class="slides">
+        <img class="img4" src="images/customer4.jpg" alt="Customer 4">
+        <p>"As a vegan, I appreciate the dairy-free options at Frozen Oasis. Their sorbets are so refreshing!"</p>
+        <p class="author">- alex mohi</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-content">
+        <div class="contact-form-container">
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="contact-info-container">
+            <div class="contact-info">
+                <h3>Address:</h3>
+                <p>123 Ice Cream Avenue, Frosty Town, Chillsville</p>
+
+                <h3>Phone:</h3>
+                <p>+1 234 567 890</p>
+
+                <h3>Email:</h3>
+                <p>info@frozenoasis.com</p>
+            </div>
+
+            <div class="social-links">
+                <h3>Connect with Us:</h3>
+                <ul>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+  <footer>
+    <p>&copy; 2024 Ice Cream Shop. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
