@@ -1,2 +1,1 @@
-# OIBSIP
-Oasis Infobyte Internship
+My first github repository
